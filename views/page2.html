@@ -1,0 +1,59 @@
+{% include 'page.html' %}
+I am inside second template
+ 
+
+
+
+
+
+{# the first argument is the date format, which defaults to the global date format if null is passed #}
+
+{{ "now"|date(null, "Europe/Paris") }}
+
+{# or skip the format value by using a named argument for the time zone #}
+{{ "now"|date(timezone="Europe/Paris") }}
+
+
+{{ "now"|date('d/m/Y H:i', timezone="Europe/Paris") }}
+{{ text }}
+ {{ myBox.test.fname|striptags|title }} 
+
+
+{% if navigation|length > 0 %}
+    <ul>
+        {% for navigations in navigation %}
+            <li>{{ navigations.href|e }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+
+{% if 'Fabien' starts with '2' %}
+inside first if
+{% endif %}
+
+{% if 'Fabien' ends with 'n' %}
+inside second if
+{% endif %}
+
+
+
+-------------------------------
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <ul id="navigation">
+        {% for item in navigation %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <h1>My Webpage</h1>
+        {{ a_variable }}
+    </body>
+</html>-->

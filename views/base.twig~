@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   	{% block head %}
+		{% include 'head.twig' %}
+	{% endblock %}
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			{% block navigation %}
+				{% include 'navigation.twig' %}
+			{% endblock %}
+			{% block breadcrumb %}	
+				{% include 'breadcrumb.twig' %}
+			{% endblock %}
+			{% block content %}	
+				{% include 'content.twig' %}
+			{% endblock %}
+			
+		</div>
+	</div>
+</div>
+{% block footer %}	
+   {% include 'footer.twig' %}
+{% endblock %}
+
+ 
+  </body>
+</html>

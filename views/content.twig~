@@ -1,0 +1,40 @@
+<div class="carousel slide" id="carousel-45950">
+    <ol class="carousel-indicators">
+        
+
+	{% for item in carousel_content %}
+		
+		<li data-slide-to="{{ item.number }}" class="{{ ( item.active ) ? 'active' : '' }}" data-target="#carousel-45950"></li>
+	   
+        {% endfor %}
+
+    </ol>
+    <div class="carousel-inner">
+
+	
+	 {% for item in carousel_content %}
+		
+		<div class="item {{ ( item.active ) ? 'active' : '' }} ">
+            <img alt="Carousel Bootstrap First" src="{{ item.href }}">
+                <div class="carousel-caption">
+                   	 <h4>
+				{{ item.caption }}
+			</h4>
+                   	 <p>
+			{{ item.description }}
+			</p>
+                </div>
+            </div>
+
+           
+        {% endfor %}
+
+
+       
+                <a class="left carousel-control" href="#carousel-45950" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-45950" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>

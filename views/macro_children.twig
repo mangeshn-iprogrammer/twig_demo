@@ -1,0 +1,18 @@
+
+{#
+{% import 'macro_parent.twig' as form %}
+ User Name {{ form.input('username') }}
+
+<br>
+
+email address{{ form.textarea('address') }}
+
+<br>-----------------------<br>
+#}
+	
+
+
+{{ "Twig<br />" }} {# won't be escaped #}
+
+{% set text = "Twig<br />" %}
+{{ text }} {# will be escaped #}

@@ -1,0 +1,18 @@
+
+{#{% embed "breadcrumb" with {'foo': 'bar'} %}
+
+{% endembed %}
+#}
+<ul class="nav nav-tabs">
+
+{% for item in navigation_content %}
+	<li class="{{ item.active }}">
+		<a href="{{ item.href }}">{% filter title %}{{ item.anchor_caption }}{% endfilter %}</a>		
+	</li>
+{% endfor %}	
+
+
+</ul>
+			
+
+

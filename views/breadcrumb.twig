@@ -1,0 +1,27 @@
+<ul class="breadcrumb">
+	
+
+	{% for item in breadcrumb_content %}
+		<li class="{{ ( item.active ) ? 'active' : '' }}" >
+			{% if item.lastlink %}
+				{{ item.caption }}		
+			{% endif %}
+			{% if item.lastlink  == false %}
+				<a href='{{ item.href }}'>{{ item.anchor_caption }}</a>
+				<span class="divider">{{ item.caption }}</span>			
+			{% endif %}
+						
+			
+			
+		</li>
+		
+
+
+		
+	   
+        {% endfor %}
+
+
+
+
+</ul>

@@ -1,0 +1,10 @@
+
+{% macro input(name,type,value,size) %}
+	<input type = "{{ type|default('text')}}" name = "{{ name }}" value = "{{ value|e }}" size = "{{ size | default(20) }}" />
+{% endmacro %}
+
+{% macro textarea(name, value, rows, cols) %}
+	<textarea name="{{ name|e }}" rows = "{{ rows|default(10) }}" cols = "{{ cols|default(50) }}" >{{ value|e }}</textarea>	
+{% endmacro %}
+
+
